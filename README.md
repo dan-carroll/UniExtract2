@@ -1,31 +1,31 @@
-# UniExtract
-Universal Extractor 2 or Universal Extractor (Bioruebe version) as it is also called to avoid confusion is an unofficial updated and extended version of the [original UniExtract by Jared Breland](http://legroom.net/software/uniextract). As the development of the original version has stopped and no update has been published for years, many forked (modified and maintained by the community) Universal Extractors have arised. This is the most advanced and the only one with a fully transparent development using a public GitHub-powered source code repository.
+# Universal Extractor 2 _(UniExtract2)_
+Universal Extractor 2 is designed to extract files from a very long list of file formats, including standard archives such as `.zip` and `.rar`, application installers and disk images. An overview of supported file types can be found [here](/docs/FORMATS.md)
+
+This program is an unofficial updated and extended version of the [original UniExtract by Jared Breland](http://legroom.net/software/uniextract). As the development of the original version has stopped and no update has been published for years, many forks (modified versions, maintained by volunteers from the community) have arisen. This is the most advanced of them, featuring a very long list of enhancements.
 
 ## New features
 
+- 500+ new supported file types
 - Batch mode
-- Scan only mode to determine file types without extracting
+- Scan only mode to detect the type of any given file
 - Built-in updater
-- 100+ new supported file types
-- Audio and video extraction for multimedia files
-- Cascading context menu
 - Support for password list for common archives
-- Improved optional status box with progress indicator
+- Improved context menu integration and status box
 - Better and faster file analysis
-- Support for some extractors not shipping with UniExtract as plugins
 - Silent mode, not showing any prompts
 - Many interface improvements and redesigned dialogs
-- Resource usage/speed improvements, lots of fixes
-- Auto-using 64 bit versions of extractors if supported by OS
+- Resource usage/speed improvements, lots of bug fixes
 
 See the changelog for a complete log of all improvements.
 
 ## Download
 Get the latest version [here](https://github.com/Bioruebe/UniExtract2/releases)
 
-Virus alert? - Universal Extractor does not contain any malware. Some anti-virus software occasionally misdetects files inside UniExtract's program directory. (You know, better warn too much than let any malware slip through.) But you can be sure that this is a so-called false positive, an error - if you downloaded UniExtract from the official source at `https://github.com/Bioruebe/UniExtract2`. If you encounter a false positive, please report it [here](https://github.com/Bioruebe/UniExtract2/issues/78).
+###### Virus alert?
+Universal Extractor does not contain any malware. Some anti-virus software occasionally misdetects files inside UniExtract's program directory. (You know, better warn too much than let any malware slip through.) But you can be sure that this is a so-called false positive, an error - if you downloaded UniExtract from the official source at `https://github.com/Bioruebe/UniExtract2`. If you encounter a false positive, please report it [here](https://github.com/Bioruebe/UniExtract2/issues/78).
 
-'Windows protected your PC'? - Modern versions of Windows have a feature called SmartScreen, which warns about unknown files. This means software without a big company behind it and/or a huge userbase produces a warning. Don't panic! Mostly this happens after a new version of UniExtract has been released. After enough users updated their installation, the warning might vanish, because it now has reputation. If you see a SmartScreen warning, you can safely click 'More info', then 'Run anyway'.
+###### 'Windows protected your PC'?
+Modern versions of Windows have a feature called SmartScreen, which warns about unknown files. This means software without a big company behind it and/or a huge userbase produces a warning. Don't panic! Mostly this happens after a new version of UniExtract has been released. After enough users updated their installation, the warning might vanish, because it now has reputation. If you see a SmartScreen warning, you can safely click 'More info', then 'Run anyway'.
 
 ## FAQ
 
@@ -65,7 +65,7 @@ Did you encounter a problem with UniExtract? Please report what went wrong to us
 2. Download and install [SciTE](https://www.autoitscript.com/site/autoit-script-editor/downloads/) (Optional)
 3. Clone this repository **or** download a snapshot and unpack into a folder of your likings
 4. Open UniExtract.au3 in SciTE and hit `F5` to run in debug mode; `F7` to build an executable file **or** run UniExtract.au3 through Aut2Exe (look [here](https://github.com/Bioruebe/UniExtract2/issues/72#issuecomment-313288728) for more information about Aut2Exe)
-5. ~Download the latest release version and unpack into the same directory to install additional program files not included in the source distribution. Do not overwrite files.~ Beginning with RC 1, this has been simplified: just run the updater after building. All neccessary files are downloaded automatically. Make sure to not overwrite UniExtract.exe: if the update message says an update for Universal Extractor is available select no, then answer with yes when being notified about 'Universal Extractor program files'.
+5. ~Download the latest release version and unpack into the same directory to install additional program files not included in the source distribution. Do not overwrite files.~ Beginning with RC 1, this has been simplified: just run the updater after building. All necessary files are downloaded automatically. Make sure to check 'Install beta updates' from the settings dialog to get the most recent versions of the program files.
 
 ## Contributions
 
@@ -75,7 +75,10 @@ Feel free to submit bug reports or feature requests using the issues tab or the 
 
 ## License
 
-Universal Extractor is licensed under GPLv2. See LICENSE for the full legal text.
+Universal Extractor is licensed under **GPLv2**. See LICENSE for the full legal text.
 Code (functions, UDFs, etc.) written from scratch by me (which are not under copyleft) can also be used in your own projects under the terms of a BSD 3-clause license.
 
-Universal Extractor uses [TrIDLib by Marco Pontello](http://mark0.net/code-tridlib-e.html) and many other great tools and libraries to support as many file formats as possible. A detailed list can be found [here](https://github.com/Bioruebe/UniExtract2/blob/master/helper_binaries_info.txt).
+Universal Extractor uses [TrIDLib by Marco Pontello](http://mark0.net/code-tridlib-e.html) and many other great tools and libraries to support as many file formats as possible.
+
+Please note that Universal Extractor includes third-party software, which uses different licenses than the main program. Specifically, **some extractors do not allow commercial use**. If you intend to use the software for commercial purposes, please check the individual license files in the `/docs` subdirectory and the [helper binary info file](https://github.com/Bioruebe/UniExtract2/blob/master/helper_binaries_info.txt) first.
+Feel free to delete files from the `/bin` subdirectory whose license does not fit your use case.

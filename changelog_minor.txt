@@ -3,7 +3,11 @@ RC 3:
   Added support for Amiga Disk Files using unADF
   Added support for PDF files using Xpdf command line tools
   Added support for hundreds of game archives using GARbro
-  Added unshield as the default extractor for InstallShield cab files
+  Added support for Godot engine packages using godotdec
+  Added support for Actual Installer executables
+  Added support for Clickteam Install Creator installers using cicdec
+  Added support for newer Symbian Os packages using extsis (plugin)
+  Added unshield as the default extractor for InstallShield cab files, thanks to TAbdiukov
   Fixed some installers being misdetected as InstallShield
   Fixed swf exe extraction not terminating correctly
   Fixed console window always being visible for extractions using definition files
@@ -13,31 +17,55 @@ RC 3:
   Fixed some FMOD sound banks not being fully extracted, thanks to Sakkade
   Fixed some zip extractions being detected as failed, although they completed successfully
   Fixed 'NScripter archive' false positives
-  Fixed problems with BCM, CHM, CreateInstall, FEAD, InstallShield Z, MSP, SQLite, Thinstall, UU extraction
+  Fixed problems with BCM, Bink, CHM, CreateInstall, FEAD, InstallShield Z, MSP, Reflexive Arcade Installers, SuperDAT, SQLite, Thinstall, UU, VMDK, WMA extraction
   Fixed ttarch extraction failing if UniExtract's path contains spaces, thanks to wwh1004
   Fixed 'Game Select' dialog being displayed in silent mode
+  Fixed batch mode not being enabled if directory is passed via command line
+  Fixed some extracted files could be lost if moving the file/folder failed, thanks to patrickdrd
+  Fixed context menu items not being shown if more than 15 files are selected
+  Fixed several UI issues, thanks to stdedos
+  Fixed rare problem during program files updates preventing some files from being downloaded correctly
   Changed Wise extraction: E_WISE is now used automatically, the method select dialog only appears if it fails
   Changed output directory input field to autofill after typing an input file path
-  Changed design of 'Unknown file type' error dialog, feedback prompt, FFmpeg prompt, 'Plugin missing' error message
+  Changed design/usability of 'Unknown file type' error dialog, feedback prompt, FFmpeg prompt, 'Plugin missing' error message,
+							  'Batch mode duplicate' warning
+  Changed drag and drop: when a folder is passed, all files in subfolders are added to batch mode as well
+						(this can be disabled by adding batchrecurse=0 to section 'UniExtract Preferences' in UniExtract.ini)
+  Changed 'Remember window position' option to also store window size, thanks to ltdeta
   Improved speed of file type detection
-  Improved file type detection for .mht, .eml, .xz, some game archives
-  Updated EnigmaVB unpacker to 0.56
-  Updated ExeInfo PE to 0.0.5.4
+  Improved file type detection for .eml, .mht, .xz, some game archives
+  Improved detection of multipart archives when adding files to batch queue
+  Improved error detection for encrypted archives
+  Improved Visionaire extraction for many games: fixed file naming and corrupt webp images
+  Updated EnigmaVB unpacker to 0.57
+  Updated ExeInfo PE to 0.0.5.6
   Updated innounp to 0.49
-  Updated jsMSIx to 1.19.0.1
+  Updated lzop to 1.04
   Updated MediaInfo to 19.04
+  Updated mtee to 2.21
   Updated PeaZip to 0.65
   Updated QuickBMS to 1.9.2
   Updated SQLite to 3.38.0
   Updated UnRAR to 5.71; added x64 version
-  Updated unrpa to 1.6
+  Updated unrpa to 2.3.0
+  Updated unshield to 1.4.d14d2e2 x86, thanks to lifenjoiner
   Updated upx to 3.95w
-  Updated WiX to 3.11.1
-  Removed Crass/Crage and disunity, replaced with GARbro
+  Updated WiX to 3.11.2
+  Updated Bulgarian translation, thanks to jekovcar
+  Updated Chinese (Simplified) translation, thanks to SeaHOH
+  Updated French translation, thanks to Pierre le Lidgeu and zorbao
+  Updated German translation, thanks to Mr-Update
+  Updated Japanese translation, thanks to maboroshin
+  Updated Polish translation, thanks to Barnaba
+  Updated Portuguese (Brazilian) translation, thanks to igorruckert
+  Updated Russian translation, thanks to wvxwxvw
+  Updated Turkish translation, thanks to MinTR
+  Removed Arc-reader, Crass/Crage, disunity and ns2dec, replaced with GARbro
   Removed XAce, replaced with acefile
+  Removed Extract NT, replaced with 7zip
   Removed ExtractMht and MhtUnPack, replaced with 7zip and TotalObserver
-  Removed GCFScape, replaced with TotalObserver
-  Removed STIX, replaced with TotalObserver
+  Removed GCFScape and STIX, replaced with TotalObserver
+  Removed wtee, replaced with mtee
 
 RC 2b:
   RC 2b is a bugfix update adressing problems with the beta update channel
@@ -117,7 +145,7 @@ RC 2:
   Updated Ukrainian translation, thanks to YuriPet
 
 RC 1:
-  Added support for wix installers
+  Added support for WiX installers
   Added support for Spoon installers
   Added support for .rpgmvp files
   Added support for .utage files
